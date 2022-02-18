@@ -1,0 +1,14 @@
+//
+// base elements
+//
+
+.body {
+  overflow-x: hidden;
+  font-family: $font-sans;
+  max-height: 100vh;
+}
+
+// Cursor pointer
+.c-pointer{
+  cursor: pointer;
+}

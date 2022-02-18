@@ -1,0 +1,29 @@
+//
+// scrollbar for list in sidebar-menu
+//
+
+.list-scrollbar, .list-setor {
+  position: relative;
+  overflow: hidden;
+}
+
+.list-scrollbar.ps__rail-y.ps--clicking .ps__thumb-y,
+.list-scrollbar.ps__rail-y:focus .ps__thumb-y,
+.list-scrollbar.ps__rail-y:hover .ps__thumb-y,
+.list-scrollbar.ps__thumb-y {
+  width: $sm-scrollbar !important;
+}
+
+.list-setor .ps__rail-y.ps--clicking .ps__thumb-y,
+.list-setor .ps__rail-y:focus .ps__thumb-y,
+.list-setor .ps__rail-y:hover .ps__thumb-y,
+.list-setor .ps__thumb-y {
+  width: $sm-scrollbar;
+}
+
+// customize scrollbar
+.list-scrollbar .ps__rail-y {
+  margin-top: $sm-top;
+}
+
+

@@ -1,0 +1,84 @@
+//
+// Colors
+//
+
+// Color Variables
+$white: rgb(255, 255, 255);
+$dark:  rgb(38, 42, 47);
+
+
+$success:   #46a93e;
+$danger:    #e9190c;
+$alert:     #ecfd00;
+$original:  #304dd2;
+
+// Utilities
+.bg-transparent{
+  background: transparent !important;
+}
+.bg-danger{
+  background: $danger;
+}
+.bg-success{
+  background: $success;
+}
+.bg-alert{
+  background: $alert;
+}
+// Themes
+$theme-colors: (
+  'original': (
+    'body-bg':                darken($white, 10.5),
+    'body-color':             darken($white, 65),
+    // Sidebar Components
+    'sidebar-bg':             lighten($original, 0),
+    'list-color':             darken($white, 14),
+    'list-link':              darken($white, 10),
+    'scrollbar-bg':           darken($white, 10),
+    'hover-link':             darken($white, 5),
+    'icon-bg':                darken($white, 0),      
+    'list-border':            lighten($original, 40),
+    'list-link-bg':           lighten($original, 10),
+    // Navbar Components
+    'navbar-link':            lighten($original, 65),
+    'left-bg':                lighten($original, 0),
+    'nav-icon':               darken($white, 0),
+    'nav-icon-hover':         darken($white, 5),
+    'dropdown-link':          darken($white, 65),
+    'dropdown-bg':            darken($white, 4.5),
+    'dropdown-item-bg':       darken($white, 10.5),
+    // Content
+    'content-bg':             darken($white, 0),
+    // Content - Index
+    'knowhow-text-icon':      lighten($original, 5),
+    'progress-bar':           lighten($original, 15),
+    'ninebox-square':         lighten($original, 10),
+    'ninebox-square-hover':   darken($original, 10),
+    'text-name':              darken($white, 0),
+    'text-name-footer':       darken($white, 40),
+    'aval-360':               darken($white,20), 
+    'aval-360-value':         lighten($original, 20),
+    // Content - Minha Carreira
+    'flag-career':            darken($original,5),
+    // Content - Knowhow
+    'categ-desc':             lighten($dark, 10),
+    // Content - Estrutura-Empresa
+    '_body-hover':            darken($white, 10),
+    'setor-text':             lighten($dark, 35),
+    'trash-icon':             lighten($danger, 0),
+    'edit-icon':              darken($alert, 5),
+    'search-icon':            lighten($original,0),
+    'trash-icon-hover':       darken($danger, 10),
+    'edit-icon-hover':        darken($alert, 15),
+    'search-icon-hover':      darken($original,10),
+    // Performance
+    'cg-icons':               darken($original, 0),
+    'cg-icons-bg':            darken($white, 5),
+    'cg-icons-hover':         darken($original, 5),
+    // Loader
+    'loader-background':      darken($white, 10.5),
+    'loader-color':           lighten($original, 10),
+    // Content - Error
+    'title-error':            lighten($original, 10)
+  )
+);

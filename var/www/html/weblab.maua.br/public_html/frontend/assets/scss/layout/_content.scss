@@ -1,0 +1,81 @@
+//
+// wrapping layout for contnet
+//
+
+.content {
+  min-width: 100vw;
+  padding-top: $sm-top-content;
+  @include media-breakpoint-up('md') {
+    min-width: 0;
+    width: 100%;
+  }
+}
+#container{
+  z-index: 1000;
+  opacity: 0;
+}
+.content-box {
+  padding: rem(20);
+  @include font-size($font-size);
+  @include border-radius($border-radius);
+}
+.widget-single{
+  overflow: auto;
+  min-height: 40vh;
+  max-height: 40vh;
+  .list-setor{
+    max-height: 15vh;
+  }
+}
+.widget-single .desc-cargo{
+  overflow: hidden !important;
+ 
+}
+.widget-double{
+  overflow: auto;
+  min-height: 82vh;
+  max-height: 82vh;
+  .list-setor{
+    max-height: 50vh;
+  }
+}
+
+.widget-single ._header, .widget-double ._header{
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+.widget-single .section-body{
+    min-height: 20vh !important;
+}
+.widget-single ._body{
+ 
+  padding: rem(5) 0;
+  transition: $transition-default all;
+
+}
+.widget-double ._body{
+  max-height: 20vh !important;
+  padding: rem(10) 0;
+  transition: $transition-default all;
+}
+.widget-single span i, .widget-double span i, .widget-register span i, .widget-display span i{
+  transition: $transition-default all;
+}
+
+.categ-row, .colab-row, .log-row, .gest-row{
+  margin-bottom: - rem(35) !important;
+}
+.perg-row{
+  margin-bottom: - rem(15) !important;
+}
+
+.pergunta-rgtrd{
+  height: 10vh !important;
+  .pergunta-txt{
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    
+    margin: 0 auto;
+  }
+}

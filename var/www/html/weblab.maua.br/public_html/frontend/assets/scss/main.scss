@@ -1,0 +1,44 @@
+/*!
+ * Sidebar menu for Bootstrap 4
+ * Copyright Zdeněk Papučík
+ * MIT License
+*/
+
+// bootstrap
+@import '../../../vendor/twbs/bootstrap/scss/functions';
+@import '../../../vendor/twbs/bootstrap/scss/variables';
+@import '../../../vendor/twbs/bootstrap/scss/mixins';
+
+// Variables and Funcions
+@import 'utils/_functions';
+@import 'utils/_variables';
+@import 'utils/_typography.scss';
+
+// Base Body
+@import 'dist/_body';
+
+// Content and Sidebar Bases
+@import 'layout/_content';
+@import 'layout/_sidebar';
+@import 'layout/_loader-layout';
+
+// Navbar
+@import 'components/_navbar';
+@import 'components/_dropdown';
+
+// Sidebar
+@import 'components/_list';
+@import 'components/_scrollbar';
+
+// Loader
+@import 'components/loader';
+// Widgets
+@import 'components/widget';
+@import 'components/progressbar';
+@import 'components/round-slider';
+@import 'components/card-standard';
+@import 'components/select';
+@import 'components/light';
+// Color and Themes
+@import 'themes/_colors';
+@import 'themes/_theme';

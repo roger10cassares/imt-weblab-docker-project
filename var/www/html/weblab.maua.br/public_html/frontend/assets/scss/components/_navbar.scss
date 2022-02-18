@@ -1,0 +1,61 @@
+//
+// customize navbar items
+//
+.navbar{
+  // Fixing the navbar at top
+  position: fixed;
+  margin: 0;
+  padding: 0;
+
+  box-shadow: 0px 0px 0px 0px !important;
+  height: $sm-top;
+  z-index: 1004;
+}
+
+.left{
+  float: left;
+  width:  $sm-sidebar;
+  padding-top: rem(15);
+  height: inherit;
+  transition: 0.05s cubic-bezier(0,1,1,0) 0s;
+}
+.right{
+  float: right;
+  width: calc(100vw - 16em);
+  height: inherit;
+}
+.search{
+  background: $white;
+  border: rem(1) solid darken($white, 10);
+  border-radius: rem(8);
+  .input-group-append{
+    border-radius: rem(8);
+  }
+}
+.nav-square{
+  margin-top: rem(28);
+}
+.nav-square-icon{
+  padding: rem(8) rem(11);
+  border: rem(1) solid darken($white, 30);
+  border-radius: rem(5);
+  font-size: rem(20);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.page-title{
+  font-size: rem(30);
+}
+.navbar-link {
+  margin-left: rem(3);
+}
+
+.navbar-bars {
+  transition: 0.2s all;
+  margin-right: rem(5);
+  color: black !important;
+  @include font-size($font-size);
+}
+.navbar-toggle{
+  padding-right: 0 !important;
+}

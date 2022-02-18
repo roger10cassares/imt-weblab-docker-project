@@ -1,0 +1,22 @@
+/// convert px to rem
+/// {number} $pixels unit in pixels
+/// {number} $context default browser size
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}rem;
+}
+@keyframes grow{
+  0%, 100%{
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  50%{
+    -webkit-transform: scaleY(1.8);
+    -ms-transform: scaleY(1.8);
+    -o-transform: scaleY(1.8);
+    transform: scaleY(1.8);
+  }
+}

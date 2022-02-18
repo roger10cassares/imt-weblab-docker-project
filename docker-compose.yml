@@ -1,0 +1,117 @@
+version: "3"
+services:
+    nginx:
+        container_name: weblab-nginx
+        restart: always
+        build:
+            context: ./build/nginx        
+            dockerfile: Dockerfile
+        volumes:
+            - ./etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./etc/nginx/conf.d:/etc/nginx/conf.d
+            - ./etc/ssl/private:/etc/ssl/private
+            - ./etc/ssl/certs:/etc/ssl/certs
+            - ./var/www/html/weblab.maua.br/public_html:/usr/share/nginx/html
+            - ./var/log/nginx:/var/log/nginx
+        ports:
+            - 80:80
+            - 443:443         
+        depends_on:
+            - php-fpm
+            - pgadmin4
+            - node-red
+        networks:
+            - weblab-network
+
+    php-fpm:
+        container_name: weblab-php-fpm
+        restart: always
+        build:
+            context: ./build/php-fpm
+            dockerfile: Dockerfile
+        volumes:
+            - ./var/www/html/weblab.maua.br/public_html:/var/www/html
+        networks:
+            - weblab-network
+
+    postgres:
+        container_name: weblab-postgres
+        build:
+            context: ./build/postgres
+            dockerfile: Dockerfile
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=P0stgr3s#
+        volumes:
+            - ./var/lib/postgres:/var/lib/postgresql/data
+        networks:
+            - weblab-network
+
+    pgadmin4:
+        container_name: weblab-pgadmin4
+        restart: always
+        build:
+            context: ./build/pgadmin4
+            dockerfile: Dockerfile
+        environment:
+            - PGADMIN_LISTEN_ADDRESS=pgadmin4
+            - PGADMIN_LISTEN_PORT=5050
+            - PGADMIN_DEFAULT_EMAIL=weblab@maua.br
+            - PGADMIN_DEFAULT_PASSWORD=Pg4dm1n4#
+            - PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION=True
+            - 'PGADMIN_CONFIG_LOGIN_BANNER="Authorised users only!"'
+        volumes:
+            - ./var/lib/pgadmin4:/var/lib/pgadmin
+        depends_on:
+            - php-fpm
+            - postgres
+        networks:
+            - weblab-network
+
+    mosquitto:
+        container_name: weblab-mosquitto
+        restart: always
+        build:
+            context: ./build/mosquitto
+            dockerfile: Dockerfile
+        volumes:
+            - ./etc/mosquitto:/mosquitto/config
+            - ./var/data/mosquitto:/mosquitto/data
+            - ./var/log/mosquitto:/mosquitto/log
+        ports:
+            - 1883:1883
+            - 8883:8883
+            - 9001:9001
+            - 9002:9002
+        networks:
+            - weblab-network
+
+    node-red:
+        container_name: weblab-node-red
+        restart: always
+        build:
+            context: ./build/node-red
+            dockerfile: Dockerfile
+        environment:
+            - NODE_RED_ENABLE_PROJECTS=true
+        volumes:
+            - ./etc/node-red:/data
+        networks:
+            - weblab-network
+
+###### Uncomment and edit after nodejs app implementation######
+    nodejs-example:
+        container_name: weblab-nodejs-example
+        restart: always
+        build:
+            context: ./build/nodejs-example
+            dockerfile: Dockerfile
+#       ports:
+#            - 3300:3300
+        networks:
+            - weblab-network
+
+
+networks:
+    weblab-network:
+        driver: bridge

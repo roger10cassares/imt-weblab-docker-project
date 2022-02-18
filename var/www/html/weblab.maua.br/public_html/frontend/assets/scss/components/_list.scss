@@ -1,0 +1,86 @@
+//
+// list for sidebar-menu
+//
+
+.list {
+  max-height: 94vh;
+  padding: rem(110) rem(10) rem(0);
+  overflow: hidden;
+  @include font-size($font-size);
+}
+
+.list-item {
+  padding: 0;
+  margin-top: rem(10);
+  line-height: rem(34);
+}
+
+.list-title {
+  margin-bottom: 0;
+  @include font-size($font-size-sm + 10);
+  letter-spacing: rem(2);
+  border-bottom: rem(1) solid;
+}
+
+.list-hidden {
+  display: none;
+  padding-left: rem(10);
+  margin: rem(15) 0 rem(15) rem(10);
+  overflow: hidden;
+}
+
+.list-link {
+  display: block;
+  padding: 0 rem(10);
+  margin-bottom: rem(2);
+  transition: 0.3s;
+  @include border-radius($border-radius);
+  @include hover {
+    text-decoration: none;
+
+    .fa,.fas,.far {
+      transform: rotate(360deg);
+      transition: 0.8s all;
+    }
+  }
+}
+
+.list-icon {
+  width: rem(40);
+  font-size: rem(25);
+  display: inline-block;
+}
+
+
+// arrow icon for list
+.link-arrow:before {
+  margin-right: rem(3);
+  font-size: rem(10);
+  float: right;
+}
+
+// arrow up and down icon
+.link-arrow.up:before {
+  font-family: $font-awesome;
+  font-weight: $font-weight;
+  content: "\f054";
+}
+
+.link-arrow.down:before {
+  font-weight: $font-weight;
+  font-family: $font-awesome;
+  content: "\f078";
+}
+
+// effects up and down icon
+.link-arrow.transition:before {
+  transition: 0.2s all;
+}
+
+.link-arrow.rotate:before {
+  transform: rotate(90deg);
+}
+
+.link-arrow.rotate-revert:before {
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,29 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "json-db-node-red": "~0.5.3",
+        "node-red-contrib-bool-gate": "~1.0.2",
+        "node-red-contrib-buffer-array": "~1.1.0",
+        "node-red-contrib-calc": "~1.0.3",
+        "node-red-contrib-component-dashboard": "0.0.4",
+        "node-red-contrib-curve": "~1.0.1",
+        "node-red-contrib-dashboard-average-bars": "0.0.6",
+        "node-red-contrib-flic-buttons-hci": "~0.1.5",
+        "node-red-contrib-image-simple-node": "0.0.8",
+        "node-red-contrib-json": "~0.2.0",
+        "node-red-contrib-json-db": "~0.6.2",
+        "node-red-contrib-modbus": "~5.13.3",
+        "node-red-contrib-queue-gate": "~1.4.0",
+        "node-red-contrib-serial-modbus": "0.0.11",
+        "node-red-contrib-simple-gate": "~0.3.1",
+        "node-red-contrib-typeform": "~0.1.1",
+        "node-red-contrib-ui-actions": "~0.1.8",
+        "node-red-contrib-ui-led": "~0.3.1",
+        "node-red-contrib-vnc": "~0.1.5",
+        "node-red-contrib-web-worldmap": "~2.3.6",
+        "node-red-dashboard": "~2.20.0"
+    }
+}

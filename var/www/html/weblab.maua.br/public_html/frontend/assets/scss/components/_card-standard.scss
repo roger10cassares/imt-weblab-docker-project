@@ -1,0 +1,26 @@
+.widget-register{
+    overflow: auto;
+    min-height: 32vh;
+    max-height: 32vh;
+}
+.widget-display{
+    overflow: auto;
+    min-height: 48vh;
+    max-height: 48vh;
+}
+.card-display{
+    max-height: rem(95) !important;
+}
+.categ-card, .teste-card{
+    height: 20vh !important;
+   
+}
+.categ-desc, .teste-desc{
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    
+    margin: 0 auto;
+   
+    
+}

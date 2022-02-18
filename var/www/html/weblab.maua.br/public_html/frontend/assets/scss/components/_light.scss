@@ -1,0 +1,9 @@
+#light{
+    height: rem(50);
+    width: rem(50);
+    border-radius: 50%;
+    background: #333;
+}
+#light.active{
+    background: yellow;
+}

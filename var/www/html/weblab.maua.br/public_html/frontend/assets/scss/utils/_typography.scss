@@ -1,0 +1,173 @@
+
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Livvic:600i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+// Font Face
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../font/BebasNeue/BebasNeue-Bold.otf'),
+         url('../font/BebasNeue/BebasNeue-Bold.ttf');
+}
+
+// Text Style Definitions
+// Navbar
+.page-title{
+    font-family: $livic !important;
+}
+.nav-bars{
+    font-size: rem(25);
+}
+.breadcrumb{
+    font-family: $titillium !important;
+}
+
+// Sidebar
+.list-title{
+    font-family: $bebas-neue;
+}
+.list-text{
+    font-family: $livic;
+}
+
+// Content
+.widget-name{
+    font-family: $bebas-neue;
+    font-size: rem(40);
+}
+.blockquote-footer{
+    font-family: $bebas-neue;
+    font-size: rem(15);
+}
+.aval-360{
+    font-family: $titillium !important;
+    .aval-360-value{
+        font-size: rem(35);
+    }
+}
+.content-original{
+    h3, label, h2{
+        font-family: $bebas-neue;
+    }
+    span, strong{
+        font-family: $livic;
+    }
+    .flag{
+        line-height: rem(15) !important;
+        font-size:  rem(25) !important;
+        cursor: pointer;
+    }
+    .pergunta-label{
+        font-family: $bebas-neue !important;
+        font-size: rem(25);
+    }
+    .alternativa{
+        font-family: $titillium !important;
+        font-weight: bolder;
+        line-height: rem(20);
+        font-size: rem(20);
+    }
+    select {
+        font-family: $bebas-neue !important;
+        font-size: rem(13);
+    }
+    .cg-icons span {
+        border-radius: rem(3);
+        font-size: rem(25) !important;
+        cursor: pointer;
+        transition: $transition-default;
+    }
+}
+
+
+
+// Table
+.section-header ._header span{
+    font-family: $livic;
+    font-size: rem(17) !important;
+    font-weight: bold;
+}
+.section-body ._body span{
+    font-family: $titillium !important;
+    font-size: rem(15) !important;
+    font-weight: 100 !important;
+    i{
+        cursor: pointer;
+    }
+}
+// Card de Display
+.card .card-header{
+    font-family: $bebas-neue;
+    font-size: rem(20);
+}
+.card .card-body{
+    h4{
+        font-family: $bebas-neue;
+        font-size: rem(22);
+    }
+    .categ-desc, .teste-desc{
+        font-family: $titillium;
+        font-size: rem(15);
+        line-height: rem(18);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}
+
+// Estrutura Empresa
+.row-content.content-icon{
+    font-size: rem(150) !important;
+}
+.row-footer .footer-text{
+    font-size: rem(15) !important;
+    font-weight: 100 !important;
+    cursor: pointer;
+}
+.dd{
+    font-family: $titillium;
+}
+
+// Text Overflow Ellipsis - Pergunta ADM
+.pergunta-rgtrd {
+    font-family: $livic;
+    .pergunta-txt{
+        font-size: rem(15);
+        line-height: rem(18);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+
+// Login Page
+#login-container .form-row{
+    h3{
+        font-family: $bebas-neue;
+        font-size: rem(40);
+    }
+    label, span{
+        font-family: $livic;
+    }
+    strong{
+        font-family: $bebas-neue;
+    }
+}
+// Error Pages
+#error{
+    h1{
+        font-family: $bebas-neue;
+        font-size: rem(80);
+    }
+    span{
+        font-family: $livic;
+        font-size: rem(25);
+    }
+}
+.content-original{
+    h1, h4{
+        font-family: $bebas-neue !important;
+    }
+}

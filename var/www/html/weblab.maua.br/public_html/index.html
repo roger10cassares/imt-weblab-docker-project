@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- CSS LINKS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/MDB-Free_4.8.8/css/mdb.css">
+    <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css">
+    <link rel="stylesheet" href="lib/perfect-scrollbar-master/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="lib/roundSlider_1.13/roundslider.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.4/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="frontend/assets/css/main.css">
+    <title>WebLab - Pagina de Usuario</title>
+</head>
+<body class="body body-original">
+	<div class="d-flex" id="wrapper">
+
+        <!-- INICIO SIDEBAR -->
+        <!-- sidebar -->
+		<div class="sidebar sidebar-original">
+			<!-- sidebar menu -->
+			<div class="sidebar-menu">
+				<!-- menu -->
+				<ul class="list list-unstyled list-scrollbar">
+
+					<!-- multi-level dropdown menu -->
+					<li class="list-item list-text">
+						<p class="list-title text-uppercase">WEBLAB 2020</p>
+						<ul class="list-unstyled pt-4">
+							<li><a href="index-teste.html" class="list-link "><span class="list-icon"><i class="fa fa-user-tie" aria-hidden="true"></i></span>Minha Conta</a></li>
+							<li><a href="#" class="list-link link-arrow"><span class="list-icon"><i class="fas fa-file-signature" aria-hidden="true"></i></span>Experiências</a>
+								<ul class="list-unstyled list-hidden">
+									<li><a href="xp-led.html" class="list-link"><span class="list-icon"><i class="far fa-lightbulb"></i></span>LED Piloto</a></li>
+									<li><a href="xp-pot.html" class="list-link"><span class="list-icon"><i class="fas fa-weight"></i></span>Potenciometro Piloto</a></li>
+									<li><a href="xp-pcnt.html" class="list-link"><span class="list-icon"><i class="fas fa-temperature-low"></i></span>Planta de Controle 1</a></li>
+								</ul>
+                            </li>
+                            <li><a href="#" class="list-link link-arrow active"><span class="list-icon"><i class="fas fa-file-invoice"></i></span>Iniciativa Weblab</a>
+								<ul class="list-unstyled list-hidden">
+									<li><a href="xp-led.html" class="list-link"><span class="list-icon"><i class="fas fa-laptop-code"></i></span>Sobre a Iniciativa</a></li>
+									<li><a href="xp-pot.html" class="list-link"><span class="list-icon"><i class="fas fa-university"></i></span>Instituto Mauá</a></li>
+									<li><a href="xp-pcnt.html" class="list-link"><span class="list-icon"><i class="far fa-copy"></i></span>Documentação</a></li>
+								</ul>
+							</li>
+                        </ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+        <!-- FIM SIDEBAR -->
+
+        <!-- website content -->
+		<div class="content">
+			<!-- content container -->
+			<div class="container-fluid">
+                <!-- INICIO NAVBAR -->
+                <!-- navbar top fixed -->
+                <nav id="nav" class="navbar navbar-expand-lg fixed-top navbar-original">
+                    <div id="nav-left" class="left left-original">
+                        <a href="" class="nav-logo pl-3">
+                            <img src="frontend/assets/img/logo2.png" height="80" alt="">
+                        </a>
+                    </div>
+                    <div class="right right-original">
+                        <div class="collapse navbar-collapse">
+                            <div class="m-0 d-flex justify-content-end w-100">
+                                <div class="col-md-4 col-sm-3 mr-auto pt-3">
+                                    <span class="page-title">Weblab - 2020</span>
+                                    <a href="#" class="nav-bars pl-3">
+                                        <span id="sidebar-toggle"><i class="fas fa-bars"></i></span>
+                                    </a>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item text-default">Minha conta</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="col-md-4 col-3">
+                                    <div class="search input-group md-form form-sm">
+                                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-white border border-0" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-2 ml-3">
+                                    <div class="nav-square">
+                                        <span class="nav-square-icon"><i class="far fa-envelope"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-2">
+                                    <div class="nav-square">
+                                        <span class="nav-square-icon"><i class="fas fa-tasks"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-2">
+                                    <div class="dropdown dropdown-logged dropdown-logged-original mt-3">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-logged-toggle dropdown-link">
+                                            <img src="frontend/assets/img/avatar.png" alt="avatar" class="dropdown-avatar">
+                                        </a>
+                                        <div class="dropdown-menu dropdown-logged-menu dropdown-menu-right border-0 dropdown-menu-original">
+                                            <div class="dropdown-menu-arrow"></div>
+                                            <a class="dropdown-item dropdown-logged-item" href="#"><i class="fa fa-user-o" aria-hidden="true"></i>Your profile</a>
+                                            <a class="dropdown-item dropdown-logged-item" href="#"><i class="fa fa-comments-o" aria-hidden="true"></i>Your comments</a>
+                                            <a class="dropdown-item dropdown-logged-item" href="#"><i class="fa fa-key" aria-hidden="true"></i>Change password</a>
+                                            <div class="dropdown-divider border-light"></div>
+                                            <a class="dropdown-item dropdown-logged-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                                        </div>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- FIM NAVBAR -->
+                
+                <!-- INICIO LOADER -->
+                <div class="row" id="loader-wrapper">
+                    <div class="col-12 text-center">
+                        <div class="loader" id="loader">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>        
+                <!-- FIM LOADER -->
+                
+                <div class="d-none" id="container">
+                    <!-- one box -->
+					<div class="content-box mb-3 profile-widget">
+                        <div class="row pt-3">
+                            <div class="col-2">
+                                <img src="frontend/assets/img/avatar.png" height="120" alt="">
+                            </div>
+                            <div class="col-5 py-5 profile-original">
+                                <h3 class="widget-name"> Guilherme Tagliati da Silva</h3>
+                                <footer id="user-occupation-name" class="blockquote-footer float-right pr-4">Engenharia da Computação</footer>
+                            </div>
+                            <div class="col-5 py-5 float-right aval-360 aval-360-original">
+                                <div class="row">
+                                    <div class="col-6">
+                                        Experiencias Desenvolvidas
+                                        <h2 id="perc-sub" class="aval-360-value">3</h2>
+                                    </div>
+                                    <div class="col-6">
+                                        Experiencias Concluidas
+                                        <h2 id="perc-colab" class="aval-360-value">1</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 mb-3 col-md-6">
+                            <div class="content-box content-original widget-single">
+                                <h3>Experiencias</h3>
+                                <div id="knowhow-container" class="container">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <span>LED Piloto</span>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="progress-container">
+                                                <div class="progress" style="width: 50%"></div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>	
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <span>Pot Piloto</span>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="progress-container">
+                                                <div class="progress" style="width: 20%"></div>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <span>Planta de Controle</span>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="progress-container">
+                                                <div class="progress" style="width: 80%"></div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-4">
+                                          <span>Experiencia 01</span>
+                                      </div>
+                                      <div class="col-8">
+                                          <div class="progress-container">
+                                              <div class="progress" style="width: 0%"></div>
+                                          </div>
+                                          
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-4">
+                                        <span>Experiencia 02</span>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="progress-container">
+                                            <div class="progress" style="width: 30%"></div>
+                                        </div>
+                                        
+                                    </div>
+                                  </div>							
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3 col-md-6">
+                            <div class="content-box content-original widget-single">
+                                <h3>Informações</h3>
+                                <div class="row pt-4">
+                                    <div class="col-3">
+                                        <h3>Nome: </h3>
+                                    </div>
+                                    <div class="col-7">
+                                        <h3>Guilherme Tagliati da silva</h3>
+                                    </div>
+                                    <div class="col-2">
+                                      <i class="fas fa-edit fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="row pt-2">
+                                  <div class="col-3">
+                                      <h3>Curso: </h3>
+                                  </div>
+                                  <div class="col-7">
+                                      <h3>Engenharia da Computação</h3>
+                                  </div>
+                                  <div class="col-2">
+                                    <i class="fas fa-edit fa-2x"></i>
+                                  </div>
+                              </div>
+                              <div class="row pt-4">
+                                  <button class="btn btn-outline-primary">Mudar a Senha</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+      		</div>
+		</div>
+	</div>
+
+    <!-- Javascript library -->
+    <script src="vendor/components/jquery/jquery.js"></script>
+    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="lib/perfect-scrollbar-master/dist/perfect-scrollbar.js"></script>
+    <script src="lib/MDB-Free_4.8.8/js/mdb.js"></script>
+    <script src="https://kit.fontawesome.com/a1d05124c7.js"></script>
+    <script src="frontend/assets/js/sidebar.js"></script>
+    <script src="lib/roundSlider_1.13/roundslider.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.4/dist/sweetalert2.js"></script>
+
+    <script src="frontend/assets/js/fade-load.js"></script>
+	<script>
+		new PerfectScrollbar('.list-scrollbar');
+	</script>
+</body>
+</html>
